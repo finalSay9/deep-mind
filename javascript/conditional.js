@@ -1,5 +1,6 @@
+let users = ['evan', 'mercy', 'maggie', 'mark','loloncia'];
 
-let a = 3;
-let b = 0;
-let result = (a + b > 4) ? "over" : "below";
-console.log(result)
+for(let i = 0; i < users.length; i++){
+    //i = users;
+    console.log(users[i])
+}
