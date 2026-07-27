@@ -14,3 +14,18 @@ let wallet = 50;
  */
 wallet = 'empty';
 console.log(wallet)
+
+/**
+ * now protype based
+ * inheritance
+ */
+const animalProtype = {
+    speak(){console.log('eval speeak')}
+}
+
+//create action that inherites directly from animalProtype
+const action = Object.create(animalProtype);
+action.take = function(){console.log('hello')}
+
+action.take()
+action.speak()
