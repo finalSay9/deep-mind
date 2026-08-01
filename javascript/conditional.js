@@ -1,3 +1,9 @@
-const numbers = [1,2,3,4,5,6,7,8];
-const doubled = numbers.map(num => num * 3)
-console.log(doubled)
+const users = [
+  { name: "John", age: 20 },
+  { name: "Mary", age: 25 },
+  { name: "Peter", age: 30 },
+];
+
+const result = users.map((user) => user.age + 5);
+
+console.log(result);
