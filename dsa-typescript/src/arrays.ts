@@ -1,2 +1,4 @@
-let age: number = 30;
-console.log(age)
+
+const add: number = (a: number, b: number): number => {
+    
+}
