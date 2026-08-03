@@ -28,4 +28,8 @@ const info: Person = {
     email: 'evanchimwaza@gmail.com',
     age: 23
 }
-console.log(info)
+
+for(let key in info){
+    const value = info[key as keyof Person];
+    console.log(key, value)
+}
