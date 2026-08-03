@@ -15,3 +15,8 @@ const user: User = {
     email: 'evan@gmail.com',
     address: 'lilongwe'
 }
+
+//inheritance interfaces
+
+interface client  {name: string};
+interface VipClient extends client {discount: number}
