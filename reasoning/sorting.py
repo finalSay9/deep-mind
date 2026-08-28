@@ -1,7 +1,7 @@
 # given list of numbers
 #  sort them
 
-numbers: list[int] = [2,5,0,4,1,9,3,11,7]
-
-for i in range(len(numbers)):
+numbers = [1,2,3,4,]
+for i in numbers:
     print(i)
+print(numbers)
