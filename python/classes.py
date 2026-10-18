@@ -8,6 +8,8 @@ class Person:
     def __init__(self, village, marital_status):
         self.village = village
         self.marital_status = marital_status
+Person.name = "Ankoma"
+Person.address = "Los Angels"
 
 
 object1 = Person('Lilongwe', 'married')
