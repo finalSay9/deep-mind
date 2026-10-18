@@ -20,16 +20,15 @@ class Arrays:
         for _ in range(len(self.list)):
             if len(self.list) == None:
                 return f'list is empty'
-            if value not in self.list:
-                return f'{value} not available'
-            else:
+            elif value in self.list:
                 self.list.remove(value)
+           
         return self.list
 
 check = Arrays()
-print(check.add_elements())
-print(check.check_elements())
-print(check.delete_element(8))
-print(check.check_elements())
+print('original list', check.add_elements())
+print('orignal length', check.check_elements())
+print('after deletion remained list', check.delete_element(8))
+print('left legth', check.check_elements())
 
        
