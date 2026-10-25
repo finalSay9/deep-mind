@@ -1,35 +1,10 @@
-type Address = {
-    name: string,
-    id: number
-}
+const numbers: number[] = [1, 2, 3, 4, 5, 6];
 
-interface Company {
-    name: string,
-    address: Address,
-    no_of_employees: number,
-    departments: number,
-    registered: boolean
-}
-
-interface Person extends Company {
-    email: string,
-    age: number,
-}
-
-const info: Person = {
-    name: 'techvach',
-    address: {
-        name: 'welo street',
-        id: 1234
-    },
-    no_of_employees: 343,
-    departments: 34,
-    registered: true,
-    email: 'evanchimwaza@gmail.com',
-    age: 23
-}
-
-for(let key in info){
-    const value = info[key as keyof Person];
-    console.log(key, value)
+for(let n of numbers) {
+    const current = numbers[n];
+    const next = numbers[n + 1];
+    if(current !== undefined && next !== undefined && current > next) {
+        numbers[n] = next;
+        numbers[n + 1] = current;
+    }
 }
