@@ -1,10 +1,4 @@
-inventory = ["Laptop", "Mouse", "OUT OF STOCK", "Keyboard", "Monitor"]
+numbers = [1,2,3,4,5,6,7,8,9]
 
-for i in inventory:
-    # 1. Check for the error first
-    if i == "OUT OF STOCK":
-        print("Error: Missing items. Halting shipment!")
-        break
-    
-    # 2. If it's safe, proceed with shipping
-    print(f"Shipping {i}...")
+multiplied = [num * 10 for num in numbers]
+print(multiplied)
