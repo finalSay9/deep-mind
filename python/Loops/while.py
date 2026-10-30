@@ -1,9 +1,6 @@
-#initialize a control variable
-counter = 1
+# Here is your machine's inventory and prices
+vending_items = ["Soda", "Chips", "Candy", "Water"]
+vending_prices = [2.50, 1.50, 1.00, 1.20]
 
-#checking the condition
-while counter < 6:
-    #print the result
-    print(counter)
-    #update the counter
-    counter += 1
+for index, item in enumerate(vending_items, start=1):
+    print(f"{index} {item}")

@@ -1,4 +1,9 @@
-numbers = [1,2,3,4,5,6,7,8,9]
+contenders = ['google','iphone','vivo','xiaomi','sumsung']
 
-multiplied = [num * 10 for num in numbers]
-print(multiplied)
+
+
+for index, co in enumerate(contenders):
+    if index == 0:
+        index = 1
+  
+    print(f"number {index} {co}")
