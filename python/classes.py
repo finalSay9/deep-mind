@@ -4,6 +4,7 @@ class Vending:
     inventory_stock = []
 
     def __init__(self):
+        # Vending.inventory_stock.append()
         pass
 
     def display_items(self):
@@ -20,11 +21,18 @@ class Vending:
         if choice < 0 or choice > len(Vending.vending_items):
             print("enter valid choice")
         else:
+            Vending.vending_items.remove()
             print(f"{item} {price}")
+
+    def count(self):
+        return len(Vending.vending_items)
+    
     @classmethod
     def inventory(cls):
+        pass
         
 
 customer = Vending()
 customer.display_items()
 customer.choices()
+customer.count()
