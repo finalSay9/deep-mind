@@ -1,6 +1,10 @@
 class Vending:
     vending_items = ["Soda", "Chips", "Candy", "Water"]
     vending_prices = [2.50, 1.50, 1.00, 1.20]
+    inventory_stock = []
+
+    def __init__(self):
+        pass
 
     def display_items(self):
         for i, item in enumerate(self.vending_items, start=1):
@@ -19,7 +23,7 @@ class Vending:
             print(f"{item} {price}")
     @classmethod
     def inventory(cls):
-        pass
+        
 
 customer = Vending()
 customer.display_items()
