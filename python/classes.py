@@ -1,18 +1,26 @@
+class Vending:
+    vending_items = ["Soda", "Chips", "Candy", "Water"]
+    vending_prices = [2.50, 1.50, 1.00, 1.20]
 
-class Person:
-    #class attributes
-    name = 'evan'
-    age = 24
-    address = 'akoma street 241'
+    def display_items(self):
+        for i, item in enumerate(self.vending_items, start=1):
+            self.price = self.vending_prices[i-1]
+            print(f"{i}. {item} {self.price}")
 
-    def __init__(self, village, marital_status):
-        self.village = village
-        self.marital_status = marital_status
-Person.name = "Ankoma"
-Person.address = "Los Angels"
+    @staticmethod
+    def choices():
+        choice = int(input('enter your choice: '))
+        index = choice -1
+        item = Vending.vending_items[index]
+        price = Vending.vending_prices[index]
+        if choice < 0 or choice > len(Vending.vending_items):
+            print("enter valid choice")
+        else:
+            print(f"{item} {price}")
+    @classmethod
+    def inventory(cls):
+        pass
 
-
-object1 = Person('Lilongwe', 'married')
-print(object1.name, object1.age, object1.address)
-print(object1.village, object1.marital_status)
-print(Person.name, Person.age, Person.address)
+customer = Vending()
+customer.display_items()
+customer.choices()
