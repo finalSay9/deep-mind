@@ -24,28 +24,28 @@ for(let product of products) {
     total += product.price * product.quantity
 }
 
-// //find an item that is expensive
-// for(let product of products) {
-//     if(expensive === undefined || product.price > expensive.price) {
-//         expensive = product
-//     }
+//find an item that is expensive
+for(let product of products) {
+    if(expensive === undefined || product.price > expensive.price) {
+        expensive = product
+    }
     
-// }
+}
 
 
-// for(let product of products) {
-//     if(cheap === undefined || product.price < cheap.price) {
-//         cheap = product
-//     }
+for(let product of products) {
+    if(cheap === undefined || product.price < cheap.price) {
+        cheap = product
+    }
     
-// }
+}
 
-// console.log(`Total Value: ${total}`);
-// // 3. Now you can cleanly print both the name and price at the very end
-// if (expensive !== undefined) {
-//     console.log(`Most Expensive Item: ${expensive.name} (${expensive.price})`)
-// }
+console.log(`Total Value: ${total}`);
+// 3. Now you can cleanly print both the name and price at the very end
+if (expensive !== undefined) {
+    console.log(`Most Expensive Item: ${expensive.name} (${expensive.price})`)
+}
 
-// if (cheap !== undefined) {
-//     console.log(`Most Cheap Item: ${cheap.name} (${cheap.price})`)
-// }
+if (cheap !== undefined) {
+    console.log(`Most Cheap Item: ${cheap.name} (${cheap.price})`)
+}
