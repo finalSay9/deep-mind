@@ -33,3 +33,26 @@ const salary_expenditure = employees.reduce((sum, current) => {
     return sum + current.salary;
 }, 0);
 console.log(`Total Salary Expenditure: ${salary_expenditure}`);
+
+//find mary by name
+const user_by_name = employees.find((employee) => {
+    if(employee.name === "Mary") {
+        return employee.name
+    }
+
+})
+console.log(user_by_name)
+
+//check whether everyone earns above 6000
+const check = employees.some((employee) => employee.salary >= 6000)
+console.log(check)
+
+//chech whether everyone earn at least 2000
+const checkif = employees.every((employee) => employee.salary <= 2000)
+console.log(checkif)
+
+const engeens = employees
+                .filter((employee) => employee.department ==="Engineering")
+                .map((employee: Employee) => employee.name)
+
+console.log(engeens)
