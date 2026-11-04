@@ -1,9 +1,18 @@
-contenders = ['google','iphone','vivo','xiaomi','sumsung']
+password = "evan1234"
 
 
+attempt = 1
 
-for index, co in enumerate(contenders):
-    if index == 0:
-        index = 1
-  
-    print(f"number {index} {co}")
+while attempt <= 4:
+    print("\nenter your password")
+    pwd = input("")
+    if pwd == password:
+        print("correct pasword")
+    elif pwd != password:
+        if attempt == 3:
+                print("system shutdown temporaliry")
+        print("incorect password try again")
+    else:
+        if attempt == 3:
+            print("system shutdown temporaliry")
+    attempt += 1
