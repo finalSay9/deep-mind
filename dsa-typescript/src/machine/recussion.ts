@@ -1,14 +1,15 @@
-function countDown(counting: number): void {
+function countDown(counting: number): number {
     console.log(counting);
 
-    if(counting == 0) {
-        return;
+    if(counting < 0) {
+        console.log("cant bt defined in negative numbers");
+    }
+    if(counting === 0 || counting === 1) {
+        return 1;
     }
 
-    else{
-        countDown((counting - 1) * counting)
-    }
+   return counting * countDown(counting - 1)
 
 }
 
-countDown(5)
+console.log(countDown(5))
