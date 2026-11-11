@@ -13,3 +13,18 @@ class MobilePayment implements PaymentMethod {
         console.log(`processing mobile payment ${amount}`)
     }
 }
+
+class PaymentService {
+    constructor(
+        private readonly paymentMethod: PaymentMethod
+    ) {}
+
+    pay(amount: number): void {
+        this.paymentMethod.process(amount)
+    }
+}
+
+const payment = new PaymentService(
+    new MobilePayment()
+)
+payment.pay(100000)
