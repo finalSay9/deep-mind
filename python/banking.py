@@ -9,7 +9,19 @@ transactions = [
 
 
 successful_deposites = []
+withdraws = []
+total = 0
 
-for transaction in transactions:
-    successful_deposites.append(transaction)
+for transact in transactions:
+    successful_deposites.append(transact['amount'])
+    if transact['type'] == "WITHDRAWAL":
+            withdraws.append(transact['amount'])
+    if transact['type'] == "DEPOSIT":
+            total += transact['amount']
+
+
 print(successful_deposites)
+print(withdraws)
+print(total)
+
+
