@@ -27,7 +27,7 @@ const all_deposit = transactions.filter((deposit) => {
 })
 console.log(all_deposit)
 
-//extracting only the transactional amounts
+//extracting only the transaction amounts
 const all_amounts = transactions.map((transactionAmaount) => {
     return transactionAmaount.amount;
 })
